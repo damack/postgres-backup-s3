@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-ADD install.sh install.sh
-RUN sh install.sh && rm install.sh
+RUN apk update && apk add postgresql python3 py3-pip && pip3 install awscli && rm -rf /var/cache/apk/*
 
 ENV POSTGRES_DATABASE **None**
 ENV POSTGRES_HOST **None**
