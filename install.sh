@@ -10,8 +10,7 @@ apk add postgresql
 
 # install s3 tools
 apk add python3 py3-pip
-pip3 install awscli six
-apk del py3-pip
+pip3 install awscli
 
 # cleanup
 rm -rf /var/cache/apk/*
